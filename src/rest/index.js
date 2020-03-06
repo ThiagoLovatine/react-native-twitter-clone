@@ -1,9 +1,11 @@
 import config from '../constants/config';
 import MockAuth from './mock/auth';
+import MockUser from './mock/user';
 
 const router = {};
 const routerMock = {
   Auth: MockAuth,
+  User: MockUser,
 };
 
 let RestRouter;
