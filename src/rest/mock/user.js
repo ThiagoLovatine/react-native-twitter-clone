@@ -1,5 +1,5 @@
 const info = async function(
-  forceReject = false,
+  forceReject = true,
   rejectMessage = 'user_not_loggued_in',
 ) {
   const promise = new Promise((resolve, reject) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import LoadingScreen from '../screens/Loading';
 import MainDrawer from './MainDrawer';
+import AuthLoginScreen from '../screens/AuthLogin';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,15 @@ const navigation = function() {
         }}
       />
       <Stack.Screen name="MainNavigation" component={MainDrawer} />
+      <Stack.Screen
+        name="Login"
+        component={AuthLoginScreen}
+        options={{
+          header: () => {
+            return null;
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 };

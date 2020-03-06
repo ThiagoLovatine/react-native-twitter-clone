@@ -1,6 +1,6 @@
 {
-  "name": "Twitter Clone",
-  "version": "0.0.1",
+  "name": "TwitterCloneReactNative",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -22,9 +22,11 @@
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.6.0",
     "react-native-indicators": "^0.17.0",
+    "react-native-masked-text": "^1.13.0",
     "react-native-reanimated": "^1.7.0",
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.2.0",
+    "react-native-vector-icons": "^6.6.0",
     "react-navigation-drawer": "^2.4.2",
     "react-redux": "^7.2.0",
     "reactotron-react-native": "^4.0.3",
