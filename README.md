@@ -39,3 +39,4 @@ I'm still deciding whether to create a web app version or not, but if do, I will
  - [React Navigation](https://reactnavigation.org/docs/getting-started)
  - [MomentJS](https://momentjs.com/)
  - [Axios](https://github.com/axios/axios)
+ - [React Native Indicators](https://github.com/n4kz/react-native-indicators)
