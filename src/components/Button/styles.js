@@ -53,22 +53,6 @@ function buttonColor(style) {
   }
 }
 
-function buttonBorderColor(style) {
-  switch (style) {
-    case 'clear': {
-      return 'white';
-    }
-    case 'secondary': {
-      return colors.primaryShadow;
-    }
-    case 'transparent': {
-      return 'white';
-    }
-    default: {
-      return colors.primary;
-    }
-  }
-}
 
 export const Container = styled.View`
   margin: 10px 0px 0px 0px;

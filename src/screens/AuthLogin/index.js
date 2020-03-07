@@ -11,6 +11,9 @@ import {useDispatch, useSelector} from 'react-redux';
 import {loginStart} from '../../store/actions/auth';
 import AlertHelper from '../../helpers/alert';
 import {StackActions} from '@react-navigation/native';
+import Row from '../../components/Row';
+import Link from '../../components/Link';
+import BallSeparator from '../../components/BallSeparator';
 
 export default function AuthLoginScreen(props) {
   const [loading, setLoading] = useState(false);
@@ -55,6 +58,21 @@ export default function AuthLoginScreen(props) {
             loading={loading}
             active={formValid}
           />
+          <Row style={{justifyContent: 'center', paddingTop: 20}}>
+            <Link
+              onPress={() => {
+                props.navigation.navigate('AuthForgotPassword');
+              }}
+              text="Forgot password?"
+            />
+            <BallSeparator />
+            <Link
+              onPress={() => {
+                props.navigation.navigate('AuthRegister');
+              }}
+              text="Sign up for Twitter Clone?"
+            />
+          </Row>
         </MainContent>
       </Container>
     </KeyboardAvoid>

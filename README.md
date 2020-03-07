@@ -10,7 +10,7 @@ I'm still deciding whether to create a web app version or not, but if do, I will
  - [x] Setup: Navigation
  - [x] Setup: Mock Api and Api Router
  - [x] Screen: Loading
- - [ ] Screen: Login
+ - [x] Screen: Login
  - [ ] Screen: Register
  - [ ] Screen: Forgot password
  - [ ] Screen: Reset password
