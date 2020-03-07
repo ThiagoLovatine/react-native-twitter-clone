@@ -3,6 +3,14 @@
 This project will user a mock api while I'm developing, it will cover most of the  functionalities that twitter already has (06/03/2020).
 I'm still deciding whether to create a web app version or not, but if do, I will post the repo link right here.
 
+# How to run
+
+ - git clone git@github.com:ThiagoLovatine/TwitterCloneReactNative.git
+ - cd TwitterCloneReactNative
+ - yarn
+ - yarn start
+ - yarn ios or yarn android
+
 
 # To-dos
 
