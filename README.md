@@ -37,7 +37,7 @@ I'm still deciding whether to create a web app version or not, but if do, I will
  - [ ] Screen: Following / Followers
  - [ ] Screen: Edit profile
 
-## Tech (Used but not limited to)
+## Thanks 💙
 
  - [React Native](https://reactnative.dev/)
  - [Redux / React Redux](https://redux.js.org/)
