@@ -7,21 +7,38 @@ import Title from '../../components/Title';
 import Button from '../../components/Button';
 import AuthLoginValidator from '../../validators/auth/login';
 import KeyboardAvoid from '../../components/KeyboardAvoid';
+import {useDispatch, useSelector} from 'react-redux';
+import {loginStart} from '../../store/actions/auth';
+import AlertHelper from '../../helpers/alert';
+import {StackActions} from '@react-navigation/native';
 
-export default function AuthLoginScreen() {
+export default function AuthLoginScreen(props) {
   const [loading, setLoading] = useState(false);
   const [formValid, setFormValid] = useState(false);
   const [uid, setUid] = useState('');
   const [password, setPassword] = useState('');
+  const distpatch = useDispatch();
+  const auth = useSelector(state => state.auth);
 
   useEffect(() => {
     setFormValid(AuthLoginValidator({uid, password}));
-    console.log(uid, password);
   }, [uid, password]);
+
+  useEffect(() => {
+    if (!auth.loading) {
+      setLoading(false);
+      if (auth.success) {
+        props.navigation.dispatch(StackActions.replace('MainNavigation'));
+      } else {
+        AlertHelper.standard('Error', 'Wrong email/username or password');
+      }
+    }
+  }, [auth]);
 
   function submit() {
     if (!formValid) return;
-    console.log('Form login');
+    setLoading(true);
+    distpatch(loginStart({uid, password}));
   }
 
   return (

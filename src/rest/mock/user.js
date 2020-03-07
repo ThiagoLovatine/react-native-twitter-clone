@@ -1,24 +1,25 @@
-const info = async function(
-  forceReject = true,
-  rejectMessage = 'user_not_loggued_in',
-) {
+import StorageHelper from '../../helpers/storage';
+
+const info = async function() {
   const promise = new Promise((resolve, reject) => {
-    if (forceReject) {
-      setTimeout(() => {
-        reject({
-          message: rejectMessage,
-          status: 'error',
-        });
-      }, 2000);
-    } else {
-      setTimeout(() => {
-        resolve({
-          name: 'Thiago Lovatine',
-          email: 'thiagolovatine@gmail.com',
-          username: 'thiagolovatine',
-        });
-      }, 2000);
-    }
+    StorageHelper.getItem('user_token').then(token => {
+      if (token) {
+        setTimeout(() => {
+          resolve({
+            name: 'Joseph Tester',
+            email: 'josephtester@gmail.com',
+            username: 'josephtester',
+          });
+        }, 1500);
+      } else {
+        setTimeout(() => {
+          reject({
+            message: 'user_not_loggued_in',
+            status: 'error',
+          });
+        }, 1500);
+      }
+    });
   });
 
   return promise;
